@@ -89,12 +89,12 @@ function draw() {
 
     kangaroo.collide(invisibleGround);
     //write a condition for gamestate should end.
-    if(IsTouching(ObstacleGroup)(gameState=END;)){
+    if(obstaclesGroup.isTouching(kangaroo){
       collidedSound.play();
       gameState = END;
     }
     //write a condition when the score should increase
-    if(){
+    if(shrubsGroup.isTouching(kangaroo){
       score = score + 1;
       shrubsGroup.destroyEach();
     }
@@ -199,7 +199,9 @@ function reset(){
   restart.visible = false;
   kangaroo.visible = true;
   //change animation of the kangaroo
+  kangaroo.changeAnimation("running",kangaroo_running);
   //destroy the shrubs and obstacle group
-  
+  shrubsGroup.destroyEach();
+  obstaclesGroup.destroyEach();
   score = 0;
 }
